@@ -23,7 +23,6 @@ const LandingPage: React.FC = () => {
           <a href="#signup" className="cta-btn">Get Started</a>
         </div>
         <div className="hero-image">
-          {/* Placeholder for image or carousel */}
         </div>
       </header>
 
@@ -66,7 +65,6 @@ const LandingPage: React.FC = () => {
           </ul>
         </nav>
         <div className="social-links">
-          {/* Placeholder for social media icons */}
         </div>
         <p>&copy; 2023 StockInfoApp. All rights reserved.</p>
       </footer>
