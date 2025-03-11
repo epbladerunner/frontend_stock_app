@@ -13,14 +13,14 @@ const App: React.FC = () => {
   return (
     <Router>
       <NavBar /> {/* This will render the navigation bar across all pages */}
-      
+ 
       <Routes> 
-        {/* Define your Routes here */}
-        <Route path="/landing_page" element={<LandingPage />} /> {/* Default route */}
+       { /*  
+        <Route path="/landing_page" element={<LandingPage />} /> 
         <Route path="/businessInfo" element={<BusinessInfo />} />
         <Route path="/chat" element={<CommunityChat />} />
         <Route path="/newsSection" element={<NewsSection />} />
-        <Route path="/stockChart" element={<StockChartWithWatchlist />} />
+        <Route path="/stockChart" element={<StockChartWithWatchlist />} />  */}
       </Routes>
     </Router>
   );

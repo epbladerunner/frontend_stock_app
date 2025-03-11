@@ -1,9 +1,15 @@
 
 import React from 'react';
 import './landing_page.css';
+import '../App.css';
+import StockChartWithWatchlist from './stockChart';
+import CommunityChat from './chat';
+import BusinessInfo from './businessInfo';
+import NewsSection from './newsSection';
 
 const LandingPage: React.FC = () => {
   return (
+    
     <div className="landing-page">
       {/* <nav className="navbar">
         <div className="navbar-brand">StockInfoApp</div>
@@ -15,7 +21,10 @@ const LandingPage: React.FC = () => {
           <li><a href="#signup" className="signup-btn">Sign Up</a></li>
         </ul>
       </nav> */}
-
+<StockChartWithWatchlist/>
+<CommunityChat/>
+<NewsSection/>
+<BusinessInfo/>
       <header className="hero-section">
         <div className="hero-content">
           <h1>Your Ultimate Stock Information Hub</h1>

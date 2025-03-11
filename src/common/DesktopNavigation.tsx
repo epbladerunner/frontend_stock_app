@@ -1,13 +1,25 @@
 import React from 'react';
 import NavLinks from './NavLinks';
 import './NavBar.css';
+import { useState } from "react";
 
+const logo = "logo192.png";
 
 const DesktopNavigation = () => {
+
+ const [click, setclick] = useState(true);
+
   return (
     <nav className="DesktopNavigation">
-      <h2 className="logo">Logo</h2>
-      <NavLinks />
+     <img 
+          src={logo} 
+          alt="Logo" 
+          className="HamburgerMenu" 
+          onClick={() => setclick(!click)} // Toggle the menu on logo click
+        />
+    
+
+      {click && <NavLinks />}
     </nav>
   );
 };

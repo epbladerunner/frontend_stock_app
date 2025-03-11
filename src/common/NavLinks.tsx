@@ -9,13 +9,13 @@
      return(
          <nav className="Hamburger-menu">
                   
-                    <ul>
+                    {/* <ul>
                     <li><Link to="/businessInfo">BussinessInfo</Link></li>
                     <li><Link to="/chat">Chat</Link></li> 
                     <li><Link to="/landing_page">LandingPage</Link></li>
                     <li><Link to="/newsSection">NewsSection</Link></li>    
                     <li><Link to="/stockChart">StockChart</Link></li>     
-                    </ul>
+                    </ul> */}
          
                 <Outlet/>
      </nav>

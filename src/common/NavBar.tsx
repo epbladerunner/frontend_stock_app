@@ -6,7 +6,7 @@
     return(
         <div>
        
-        {/* <DesktopNavigation/>  */}
+        <DesktopNavigation/> 
         
         <MobileNavigation />
        

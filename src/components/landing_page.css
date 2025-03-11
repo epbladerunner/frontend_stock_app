@@ -1,9 +1,29 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+
 body, html {
-    margin: 0;
+
+    margin: 9%;
     padding: 0;
     font-family: 'Arial', sans-serif;
     color: #fff;
     background-color: #121212;
+
+  }
+
+  @media(max-width: 768px){
+    body, html {
+
+      margin: 0%;
+      padding: 0;
+      font-family: 'Arial', sans-serif;
+      color: #fff;
+      background-color: #121212;
+  
+    }
+
   }
   
   /* .navbar {
@@ -92,20 +112,30 @@ body, html {
     font-size: 2.5rem;
     margin-bottom: 2rem;
   }
-  
+
+ 
+    /* .feature-cards {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      justify-content: center;
+
+  } */
+
   .feature-cards {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 2rem;
-    justify-content: center;
+    @apply flex flex-wrap gap-8 justify-center;
   }
   
-  .feature-card {
+  /* .feature-card {
     background-color: #1f1f1f;
     padding: 2rem;
     border-radius: 10px;
     width: 300px;
     transition: transform 0.3s;
+  } */
+
+  .feature-card{
+    @apply bg-gray-900 p-8 rounded-lg w-[300px] transition-transform duration-300;
   }
   
   .feature-card:hover {

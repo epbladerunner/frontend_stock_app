@@ -6,7 +6,7 @@ nav{
     align-items: center;
     justify-content: space-evenly;
     background: rgb(37, 63, 123);
-    padding: 30px 50px 30px 50px;
+    padding: 15px 20px ;
 }
 
 .NavLinks{
@@ -38,7 +38,33 @@ transition: .3s;
 }
 
 
-/*NavBar.css*/
+
+
+
+
+.DesktopNavigation{
+        display: none;
+    }
+
+
+    /* .MobileNavigation{
+        display: flex;
+        align-items: center;
+        height: 21.4vh;
+       
+    } */
+      
+
+
+.HamburgerMenu{
+    position: absolute;
+    left: 2%;
+    width: 40px; 
+    cursor: pointer;
+    /* width: 5%; */
+  }
+
+  /*NavBar.css*/
 
 /* .MobileNavigation{
     display: none;
@@ -49,24 +75,44 @@ transition: .3s;
 /*NavBar.css*/
 
 
-
-    .DesktopNavigation{
-        display: none;
+@media (min-width: 768px) {
+ 
+    .MobileNavigation {
+      display: none; 
     }
 
-
-    .MobileNavigation{
-        display: flex;
-        align-items: center;
-        height: 15vh;
-       
+    .DesktopNavigation {
+      display: flex; 
+      position: fixed; 
+      top: 0;
+      left: 0;
+      height: 100%; 
+      flex-direction: column; 
+      background-color: rgb(37, 63, 123);
+      padding: 40px ; 
+    
     }
+  
+    .DesktopNavigation ul {
+      list-style-type: none;
+      display: flex;
+      flex-direction: column; 
+    }
+  
+    .DesktopNavigation ul li {
+      padding: 20px 20px;
+      text-align: left;
       
-
-
-.HamburgerMenu{
-    position: absolute;
-    right: 2%;
-    cursor: pointer;
-    width: 5%;
+    }
+  
+    .DesktopNavigation ul li a {
+      color: rgb(228, 232, 230);
+      text-decoration: none;
+      font-weight: bold;
+    }
+  
+    .DesktopNavigation ul li a:hover {
+      color: rgb(199, 141, 26);
+      transition: 0.3s;
+    }
   }

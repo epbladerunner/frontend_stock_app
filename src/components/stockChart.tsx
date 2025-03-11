@@ -1,31 +1,35 @@
-import React, { useState } from 'react';
+import React, { useState,useEffect } from 'react';
 import {FetchSymbolServices} from '../api/Services'
  
 const StockChart: React.FC = () => {
-    const [selectedStock, setSelectedStock] = useState('APPL'); 
 
-    const handleStockClick = (stock: string) => {
-        setSelectedStock(stock); 
-    };
+    const [stockData, setStockData] = useState<any>(null);
+    const [symbol, setSymbol] = useState<string | null>(null);
 
-    const  SymbolTest = () => {
-
-const Symbol = FetchSymbolServices()
- console.log('symbol', Symbol);
+    const  SymbolTest = async() => {
+    const fetchedSymbol = await FetchSymbolServices();
+    setSymbol(fetchedSymbol);
+    setStockData(fetchedSymbol)
+    console.log('symbol', Symbol);
     }
+
+
 
     return (
         <div className="stock-chart-watchlist">
             <div className="watchlist">
-                <button onClick={() => handleStockClick('AAPL')}>AAPL</button>
-                <button onClick={() => handleStockClick('TSLA')}>TSLA</button>
-                <button onClick={() => handleStockClick('BTC-USD')}>BTC-USD</button>
-
-                <button onClick={() => SymbolTest()}>push to do something</button>
+                <button onClick={() => SymbolTest()}>Fetch Symbol</button>
             </div>
             <div className="stock-chart">
-                <h2> Stock Prices: {selectedStock}</h2>
-            <div>Chart for {selectedStock} goes here</div>    
+                <h2>Selected Symbol: {symbol ? symbol : 'No symbol selected'}</h2> {/* Display symbol */}
+                {stockData ? (
+                    <div>
+                        <p>Stock Info: {JSON.stringify(stockData, null, 2)}</p>
+                        <div>Chart for {symbol} goes here</div>
+                    </div>
+                ) : (
+                    <p>Loading stock data...</p>
+                )}
             </div>
         </div>
     );
