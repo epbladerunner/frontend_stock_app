@@ -11,9 +11,10 @@ import './App.css';
 
 const App: React.FC = () => {
   return (
+   
     <Router>
       <NavBar /> {/* This will render the navigation bar across all pages */}
- 
+      <div><LandingPage/></div>
       <Routes> 
        { /*  
         <Route path="/landing_page" element={<LandingPage />} /> 
@@ -23,6 +24,8 @@ const App: React.FC = () => {
         <Route path="/stockChart" element={<StockChartWithWatchlist />} />  */}
       </Routes>
     </Router>
+
+
   );
 };
 

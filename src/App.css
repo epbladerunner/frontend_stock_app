@@ -44,16 +44,16 @@
 }
 
 
-.app {
+/* .app {
   font-family: Arial, sans-serif;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
   position: relative;
-}
+} */
 
-.hamburger-menu {
+/* .hamburger-menu {
   position: fixed;
   top: 0;
   left: 0;
@@ -87,7 +87,7 @@
   text-decoration: none;
   display: block;
   margin: 0.5rem 0;
-}
+} */
 
 .main-content {
   display: flex;
