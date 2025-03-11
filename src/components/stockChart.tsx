@@ -5,7 +5,7 @@ const StockChart: React.FC = () => {
 
     const handleStockClick = (stock: string) => {
         setSelectedStock(stock); 
-    };
+    }; 
 
     return (
         <div className="stock-chart-watchlist">

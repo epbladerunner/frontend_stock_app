@@ -5,7 +5,7 @@ import CommunityChat from './components/chat';
 import BusinessInfo from './components/businessInfo';
 import NewsSection from './components/newsSection';
 import LandingPage from './components/landing_page';
-
+import StockPage from './pages/Stocks'
 
 
 const App: React.FC = () => {
@@ -14,6 +14,7 @@ const App: React.FC = () => {
       <LandingPage />
       <HamburgerMenu />
       <main>
+        <StockPage/>
         <StockChartWithWatchlist />
         <CommunityChat />
         <BusinessInfo />

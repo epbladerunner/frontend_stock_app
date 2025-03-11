@@ -1,10 +1,19 @@
 import react from 'react';
+import {useState} from 'react'
 
-export function  stockPage()
-{
+const  StockPage: React.FC = () =>{
 
-    <div className="">
-    <h1>Stocks</h1>
-    <p>graphs and stuff man</p>
-</div>
+    const [selectedStock, setSelectedStock] = useState('');
+ 
+    const handleStockClick = (stock:string)=>{
+        setSelectedStock(stock)}
+
+        return(
+            <div>
+            <button onClick = {()=>handleStockClick('')}>Stock</button>
+     </div>   )
+    
+
 }
+
+export default StockPage;
