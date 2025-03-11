@@ -3,6 +3,7 @@ import React from 'react';
 import './landing_page.css';
 
 const LandingPage: React.FC = () => {
+  ////////////////////////////////
   return (
     <div className="landing-page">
       <nav className="navbar">
