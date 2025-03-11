@@ -1,6 +1,12 @@
 
 import React from 'react';
-import './landing_page.css';
+import '../styles/styles.css';
+
+import StockChartWithWatchlist from './stockChart';
+import CommunityChat from './chat';
+import BusinessInfo from './businessInfo';
+import NewsSection from './newsSection';
+
 
 const LandingPage: React.FC = () => {
   ////////////////////////////////
@@ -57,6 +63,9 @@ const LandingPage: React.FC = () => {
         </div>
       </section>
 
+
+
+
       <footer className="footer">
         <nav className="footer-nav">
           <ul>
@@ -70,6 +79,8 @@ const LandingPage: React.FC = () => {
         <p>&copy; 2023 StockInfoApp. All rights reserved.</p>
       </footer>
     </div>
+
+
   );
 };
 

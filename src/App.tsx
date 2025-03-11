@@ -6,11 +6,11 @@ import BusinessInfo from './components/businessInfo';
 import NewsSection from './components/newsSection';
 import LandingPage from './components/landing_page';
 
-import './App.css';
+
 
 const App: React.FC = () => {
   return (
-    <div className="app">
+    <div className="sideBar">
       <LandingPage />
       <HamburgerMenu />
       <main>
@@ -20,6 +20,7 @@ const App: React.FC = () => {
         <NewsSection />
       </main>
     </div>
+    // <LandingPage/>
   );
 };
 
