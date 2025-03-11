@@ -13,7 +13,7 @@
   }
 }
 
-.App-header {
+/* .App-header {
   background-color: #282c34;
   min-height: 100vh;
   display: flex;
@@ -22,29 +22,29 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
-}
+} */
 
-.App-link {
+/* .App-link {
   color: #61dafb;
-}
+} */
 
-@keyframes App-logo-spin {
+/* @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
   }
   to {
     transform: rotate(360deg);
   }
-}
+} */
 
 
 .app {
   font-family: Arial, sans-serif;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  position: relative;
+  /* justify-content: center; */
+  /* align-items: center; */
+  /* height: 100vh; */
+  /* position: relative; */
 }
 
 .hamburger-menu {
@@ -93,7 +93,7 @@
   max-width: 800px;
   position: relative;
   z-index: 1;
-}
+} 
 
 .stock-chart-watchlist,
 .community-chat,
