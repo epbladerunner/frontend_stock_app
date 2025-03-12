@@ -4,16 +4,18 @@ import StockChartWithWatchlist from './components/stockChart';
 import CommunityChat from './components/chat';
 import BusinessInfo from './components/businessInfo';
 import NewsSection from './components/newsSection';
-import LandingPage from './components/landing_page';
+import LandingPage from './pages/landing_page';
 import NavBar from './common/NavBar';
 
 
-import './styles/styles.css';
 import Home from './pages/home';
 import News from './pages/news';
-import Login from './pages/login';
+import Login from './components/login';
 import Stocks from './pages/stocks';
 import Crypto from './pages/crypto'
+
+import './styles/styles.css';
+import './styles/widget.css';
 
 const App: React.FC = () => {
   return (

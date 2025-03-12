@@ -1,41 +1,12 @@
 body, html {
-    margin: 0;
+    margin:  5%;
     padding: 0;
     font-family: 'Arial', sans-serif;
     color: #fff;
     background-color: #121212;
   }
   
-  .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 2rem;
-    background-color: #1f1f1f;
-  }
-  
-  .navbar-brand {
-    font-size: 1.5rem;
-    font-weight: bold;
-  }
-  
-  .navbar-links {
-    list-style: none;
-    display: flex;
-    gap: 1rem;
-  }
-  
-  .navbar-links a {
-    color: #fff;
-    text-decoration: none;
-    padding: 0.5rem 1rem;
-    transition: background-color 0.3s;
-  }
-  
-  .navbar-links a:hover {
-    background-color: #333;
-    border-radius: 5px;
-  }
+
   
   .login-btn, .signup-btn {
     background-color: #007bff;
@@ -151,19 +122,16 @@ body, html {
     font-size: 0.9rem;
   }
 
-  .sideBar{
 
-
-  }
-  .app{
+  /* .app{
     font-family: Arial, sans-serif;
     display: flex;
     height: 100vh;
     position: relative;
-  }
+  } */
 
 
-  .main-content {
+  /* .main-content {
 
     display: flex;
     flex-direction: column;
@@ -174,7 +142,7 @@ body, html {
     max-width: 800px;
     position: relative;
     z-index: 1;
-  } 
+  }  */
 
 .stock-chart-watchlist,
 .community-chat,
@@ -231,3 +199,4 @@ body, html {
   .community-chat button:hover {
     background-color: #0056b3;
   }
+

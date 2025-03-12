@@ -1,17 +1,17 @@
-@import 'tailwindcss/base';
+ @import 'tailwindcss/base';
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 
 
-body, html {
+/* body, html {
 
-    margin: 9%;
-    padding: 0;
+    margin: 20%;
+    padding: 0%;
     font-family: 'Arial', sans-serif;
     color: #fff;
     background-color: #121212;
 
-  }
+  } */
 
   @media(max-width: 768px){
     body, html {
@@ -55,7 +55,7 @@ body, html {
   .navbar-links a:hover {
     background-color: #333;
     border-radius: 5px;
-  } */
+  } 
   
   .login-btn, .signup-btn {
     background-color: #007bff;
@@ -178,5 +178,5 @@ body, html {
   
   .footer p {
     font-size: 0.9rem;
-  }
+  } 
   

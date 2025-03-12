@@ -1,32 +1,18 @@
 
 import React from 'react';
-import './landing_page.css';
+import '../styles/landing_page.css';
 import '../styles/styles.css';
-import StockChartWithWatchlist from './stockChart';
-import CommunityChat from './chat';
-import BusinessInfo from './businessInfo';
-import NewsSection from './newsSection';
+ 
+
+import Footer from '../components/footer';
+import CryptoCard from '../components/crypto_card';
 
 const LandingPage: React.FC = () => {
+
   return (
 
     <div className="landing-page">
-      {/* <nav className="navbar">
-        <div className="navbar-brand">StockInfoApp</div>
-        <ul className="navbar-links">
-          <li><a href="#features">Features</a></li>
-          <li><a href="#community">Community</a></li>
-          <li><a href="#contact">Contact</a></li>
-          <li><a href="#login" className="login-btn">Login</a></li>
-          <li><a href="#signup" className="signup-btn">Sign Up</a></li>
-        </ul>
-      </nav> */}
-<div className = "sideBar">
-<StockChartWithWatchlist/>
-      <CommunityChat/>
-      <NewsSection/>
-      <BusinessInfo/>
-      </div>
+
       <header className="hero-section">
         <div className="hero-content">
           <h1>Your Ultimate Stock Information Hub</h1>
@@ -40,10 +26,8 @@ const LandingPage: React.FC = () => {
       <section id="features" className="features-section">
         <h2>Features</h2>
         <div className="feature-cards">
-          <div className="feature-card">
-            <h3>Stocks & Crypto</h3>
-            <p>Real-time data and analysis for stocks and cryptocurrencies.</p>
-          </div>
+
+          <CryptoCard/>
           <div className="feature-card">
             <h3>Company News</h3>
             <p>Latest news and updates from top companies.</p>
@@ -66,19 +50,8 @@ const LandingPage: React.FC = () => {
           </div>
         </div>
       </section>
+      <Footer/>
 
-      <footer className="footer">
-        <nav className="footer-nav">
-          <ul>
-            <li><a href="#features">Features</a></li>
-            <li><a href="#community">Community</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-        </nav>
-        <div className="social-links">
-        </div>
-        <p>&copy; 2023 StockInfoApp. All rights reserved.</p>
-      </footer>
     </div>
   );
 };
