@@ -1,3 +1,9 @@
 import react from "react"
 
-export{}
+const Stocks = async()=>{
+
+
+
+
+}
+export default Stocks;

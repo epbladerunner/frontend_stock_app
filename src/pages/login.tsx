@@ -1,3 +1,9 @@
 import react from "react"
 
-export{}
+const Login = async()=>{
+
+
+
+
+}
+export default Login;

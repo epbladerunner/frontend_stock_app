@@ -1,3 +1,10 @@
 import react from "react"
 
-export{}
+
+const Home = async()=>{
+
+
+
+
+}
+export default Home;

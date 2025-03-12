@@ -1,3 +1,9 @@
 import react from "react"
 
-export{}
+const News = async()=>{
+
+
+
+
+}
+export default News;

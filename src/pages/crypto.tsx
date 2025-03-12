@@ -1,3 +1,9 @@
 import react from "react"
 
-export{}
+const Crypto = async()=>{
+
+
+
+
+}
+export default Crypto;
