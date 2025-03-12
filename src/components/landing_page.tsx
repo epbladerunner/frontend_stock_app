@@ -12,7 +12,7 @@ const LandingPage: React.FC = () => {
   ////////////////////////////////
   return (
     <div className="landing-page">
-      <nav className="navbar">
+      {/* <nav className="navbar">
         <div className="navbar-brand">StockInfoApp</div>
         <ul className="navbar-links">
           <li><a href="#features">Features</a></li>
@@ -21,7 +21,7 @@ const LandingPage: React.FC = () => {
           <li><a href="#login" className="login-btn">Login</a></li>
           <li><a href="#signup" className="signup-btn">Sign Up</a></li>
         </ul>
-      </nav>
+      </nav> */}
 
       <header className="hero-section">
         <div className="hero-content">
