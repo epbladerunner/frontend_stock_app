@@ -152,10 +152,8 @@ body, html {
   }
 
   .sideBar{
-    font-family: Arial, sans-serif;
-    display: flex;
-    height: 100vh;
-    position: relative;
+
+
   }
   .app{
     font-family: Arial, sans-serif;
@@ -178,7 +176,7 @@ body, html {
     z-index: 1;
   } 
 
-  .stock-chart-watchlist,
+.stock-chart-watchlist,
 .community-chat,
 .business-info,
 .news-section {

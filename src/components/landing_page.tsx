@@ -9,7 +9,7 @@ import NewsSection from './newsSection';
 
 const LandingPage: React.FC = () => {
   return (
-    
+
     <div className="landing-page">
       {/* <nav className="navbar">
         <div className="navbar-brand">StockInfoApp</div>
@@ -21,12 +21,12 @@ const LandingPage: React.FC = () => {
           <li><a href="#signup" className="signup-btn">Sign Up</a></li>
         </ul>
       </nav> */}
-<div className="sideBar">
+<div className = "sideBar">
 <StockChartWithWatchlist/>
-<CommunityChat/>
-<NewsSection/>
-<BusinessInfo/>
-</div>
+      <CommunityChat/>
+      <NewsSection/>
+      <BusinessInfo/>
+      </div>
       <header className="hero-section">
         <div className="hero-content">
           <h1>Your Ultimate Stock Information Hub</h1>

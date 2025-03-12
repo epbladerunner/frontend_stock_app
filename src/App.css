@@ -97,7 +97,7 @@
   padding: 2rem;
   width: 100%;
   max-width: 800px;
-  position: relative;
+  position: absolute;
   z-index: 1;
 }
 

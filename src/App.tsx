@@ -17,10 +17,13 @@ import Crypto from './pages/crypto'
 
 const App: React.FC = () => {
   return (
-   
+ 
     <Router>
       <NavBar /> {/* This will render the navigation bar across all pages */}
       <LandingPage/>
+    
+
+  
       <Routes> 
      
         <Route path="/home" element={<Home />} /> 
