@@ -20,12 +20,16 @@ const App: React.FC = () => {
  
     <Router>
       <NavBar /> {/* This will render the navigation bar across all pages */}
-      <LandingPage/>
-    
-
-  
+      
+    <div className = "stockwidget">
+      <StockChartWithWatchlist/>
+      <CommunityChat/>
+      <NewsSection/>
+      <BusinessInfo/>
+  </div>
       <Routes> 
-     
+      
+      <Route path="/" element={<LandingPage/>} /> 
         <Route path="/home" element={<Home />} /> 
         <Route path="/news" element={<News />} />
         <Route path="/login" element={<Login />} />

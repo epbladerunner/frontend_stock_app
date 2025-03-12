@@ -10,6 +10,7 @@
          <nav className="Hamburger-menu">
                   
                     <ul>
+                    <li><Link to="/">Landing Page</Link></li>  
                     <li><Link to="/home">Home</Link></li>
                     <li><Link to="/news">Chat</Link></li> 
                     <li><Link to="/stocks">Stocks</Link></li>
