@@ -1,9 +1,11 @@
 import react from "react"
 
-const Stocks = async()=>{
+const Stocks:React.FC = () =>{
 
 
-
+    return(
+        <div>stocks</div>
+    )
 
 }
 export default Stocks;

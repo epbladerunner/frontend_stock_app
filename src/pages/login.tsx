@@ -1,9 +1,11 @@
 import react from "react"
 
-const Login = async()=>{
+const Login:React.FC =()=>{
 
 
-
+    return(
+        <div>login</div>
+    )
 
 }
 export default Login;

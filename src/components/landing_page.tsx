@@ -1,7 +1,7 @@
 
 import React from 'react';
 import './landing_page.css';
-import '../App.css';
+import '../styles/styles.css';
 import StockChartWithWatchlist from './stockChart';
 import CommunityChat from './chat';
 import BusinessInfo from './businessInfo';
@@ -21,10 +21,12 @@ const LandingPage: React.FC = () => {
           <li><a href="#signup" className="signup-btn">Sign Up</a></li>
         </ul>
       </nav> */}
+<div className="sideBar">
 <StockChartWithWatchlist/>
 <CommunityChat/>
 <NewsSection/>
 <BusinessInfo/>
+</div>
       <header className="hero-section">
         <div className="hero-content">
           <h1>Your Ultimate Stock Information Hub</h1>

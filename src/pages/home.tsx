@@ -1,9 +1,11 @@
 import react from "react"
 
 
-const Home = async()=>{
+const Home : React.FC=()=>{
 
-
+return(
+    <div>home</div>
+)
 
 
 }

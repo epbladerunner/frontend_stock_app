@@ -1,9 +1,11 @@
 import react from "react"
 
-const News = async()=>{
+const News : React.FC =()=>{
 
 
-
+    return(
+        <div>news</div>
+    )
 
 }
 export default News;

@@ -7,7 +7,13 @@ import NewsSection from './components/newsSection';
 import LandingPage from './components/landing_page';
 import NavBar from './common/NavBar';
 
-import './App.css';
+
+import './styles/styles.css';
+import Home from './pages/home';
+import News from './pages/news';
+import Login from './pages/login';
+import Stocks from './pages/stocks';
+import Crypto from './pages/crypto'
 
 const App: React.FC = () => {
   return (
@@ -15,17 +21,13 @@ const App: React.FC = () => {
     <Router>
       <NavBar /> {/* This will render the navigation bar across all pages */}
       <LandingPage/>
-      <BusinessInfo />
-      <CommunityChat />
-      <NewsSection />
-      <StockChartWithWatchlist />
       <Routes> 
-       { /*  
-        <Route path="/landing_page" element={<LandingPage />} /> 
-        <Route path="/businessInfo" element={<BusinessInfo />} />
-        <Route path="/chat" element={<CommunityChat />} />
-        <Route path="/newsSection" element={<NewsSection />} />
-        <Route path="/stockChart" element={<StockChartWithWatchlist />} />  */}
+     
+        <Route path="/home" element={<Home />} /> 
+        <Route path="/news" element={<News />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/crypto" element={<Crypto />} />
+        <Route path="/stocks" element={<Stocks />} />  
       </Routes>
     </Router>
 

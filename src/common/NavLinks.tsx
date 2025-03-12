@@ -12,9 +12,9 @@
                     <ul>
                     <li><Link to="/home">Home</Link></li>
                     <li><Link to="/news">Chat</Link></li> 
-                    <li><Link to="/landing_page">LandingPage</Link></li>
+                    <li><Link to="/stocks">Stocks</Link></li>
                     <li><Link to="/login">Login</Link></li>    
-                    <li><Link to="/signup">Sign Up</Link></li>     
+                    <li><Link to="/crypto">crypto</Link></li>     
                     </ul>
          
                 <Outlet/>
