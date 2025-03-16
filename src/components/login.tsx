@@ -1,6 +1,7 @@
 import react from "react"
 
 const Login:React.FC =()=>{
+    console.log("refresh");
 
 
     return(

@@ -20,7 +20,7 @@ useEffect(()=>{
             "action": "auth", "key": "PKMQH30TFV7J4VZ7XD2J", "secret": "AtoRkjIvkgnmcOZQRe8B7WZGKZdjFgbHF3Ov4gz9"
         })
     }
-}, [])
+}, [readyState])
 
 console.log(lastJsonMessage)
     return {lastJsonMessage, readyState}

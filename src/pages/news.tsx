@@ -1,6 +1,7 @@
 import react from "react"
 
 const News : React.FC =()=>{
+    console.log("refresh");
 
 
     return(

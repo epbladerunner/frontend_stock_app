@@ -95,6 +95,7 @@ const StockChart: React.FC = () => {
 
                 
             </div>
+      
         </div>
     );
 };
