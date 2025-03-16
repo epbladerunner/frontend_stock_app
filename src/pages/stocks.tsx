@@ -53,14 +53,14 @@ const Stocks: React.FC = () => {
 
   // Track whether the query has already been triggered
   const [hasInitialized, setHasInitialized] = useState(false);
-
-  // Destructure your Alpaca provider data
+  const [input, setInput] = useState('');
+ 
   const { lastJsonMessage, readyState, isAuthed, tickers, setTickers } = useAlpaca();
 
   // Set tickers only once when `hasInitialized` is false
   useEffect(() => {
     if (!hasInitialized) {
-      setTickers(["SPY"]);
+      setTickers([]);
       setHasInitialized(true);
       console.log("useEffect triggerd,ticker is",tickers);
     }
@@ -71,8 +71,8 @@ const Stocks: React.FC = () => {
     "alpachaQuery",  // Unique key for the query
     () => {
       console.log("useQuery triggered with this msg", lastJsonMessage);
-      // This is your custom hook which will now only run once
-      return lastJsonMessage;
+    
+      return isAuthed;
     },
     {
       
@@ -86,9 +86,31 @@ const Stocks: React.FC = () => {
     console.log("Received JSON message:", lastJsonMessage);
   }, [lastJsonMessage]);
 
-  // Handling loading and error states for useQuery
-  if (isLoading) return <div>Loading...</div>;
-  if (error) return <div>Error occurred</div>;
+ 
+  if (isLoading){
+     return <div>Loading...</div>;
+    }
+  if (error){
+    return <div>Error occurred</div>;
+  }
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setInput(e.target.value);
+  };
+
+  const handleSubmit = (e: React.ChangeEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
+    // Split the input by spaces or commas (you can customize the split logic)
+    const tickersArray = input.split(/\s*,\s*/); // Splits by comma (handles spaces too)
+    const cleanedTickers = tickersArray.map(ticker => ticker.toUpperCase());
+    const uniqueTickers = [...new Set(cleanedTickers)];
+console.log("tickers",tickers,"setTickers",setTickers,"uniqueTickers",uniqueTickers)
+    setTickers(uniqueTickers);
+ 
+  };
+
+
 
   return (
     <div>
@@ -96,7 +118,29 @@ const Stocks: React.FC = () => {
       <p>Stock Info: {JSON.stringify(lastJsonMessage, null, 2)}</p>
       <p>Status: {readyState === 1 ? "Ready" : "Not ready"}</p>
       <p>Authentication: {isAuthed ? "Authenticated" : "Not authenticated"}</p>
-    </div>
+
+
+<div>
+<form onSubmit={handleSubmit}>
+  <label>
+    Enter Ticker(s):
+    <input
+      type="text"
+      value={input}
+      onChange={handleInputChange}
+      placeholder="Enter tickers (e.g., BTC, ETH)"
+    />
+  </label>
+  <button type="submit">Submit</button>
+</form>
+
+<div>
+  <h3>Tickers Array:</h3>
+  <pre>{JSON.stringify(tickers, null, 2)}</pre>
+</div>
+</div>
+</div>
+
   );
 };
 

@@ -67,9 +67,8 @@ export function useCryptoSub(tickers: string[]) {
         console.log("last msg from jason", messages );
 
         sendJsonMessage({
-          action: 'subscribe',
-          trades: tickers,
-        });
+          "action": "subscribe", 
+          "bars": tickers});
         setPreviousTickers(tickers);
       }
     }   
