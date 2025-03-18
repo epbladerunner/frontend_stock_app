@@ -5,12 +5,7 @@ interface AlpacaWebSocketMsg {
   T: string;
   msg: string;
 }
-interface lastmessage{
-  array : stuff[];
-}
-interface stuff{
-  elements : string;
-}
+
 export function useCryptoSub(tickers: string[]) {
   const url = 'wss://stream.data.alpaca.markets/v1beta3/crypto/us';
 

@@ -72,7 +72,7 @@ const Stocks: React.FC = () => {
     () => {
       console.log("useQuery triggered with this msg", lastJsonMessage);
     
-      return isAuthed;
+      return lastJsonMessage;
     },
     {
       
