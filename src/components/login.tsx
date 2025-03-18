@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from 'react';
-import {useAppStore} from '../Store/store';
+import {useAppStore} from '../store/store';
+import '../styles/styles.css'
 // import { useNavigate } from 'react-router-dom';
 // create a store folder for globalstate
 // create routes for react router
 //
 
-export function Login() {
+const Login =() => {
  
     const [localemail, setlocalEmail] = useState<string>("");
     const [password, setPassword] = useState<string>("");
@@ -58,3 +59,5 @@ export function Login() {
     </div>
   );
 }
+
+export default Login;

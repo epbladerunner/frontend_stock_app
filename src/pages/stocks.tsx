@@ -70,6 +70,7 @@ const Stocks: React.FC = () => {
   const { data, error, isLoading } = useQuery(
     "alpachaQuery",  // Unique key for the query
     () => {
+      
       console.log("useQuery triggered with this msg", lastJsonMessage);
     
       return lastJsonMessage;
