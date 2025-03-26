@@ -1,20 +1,20 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'; // Import necessary routing components
-import Stockwidget from './components/stockwidget';
+import Stockwidget from './components/widget/stockwidget';
 import LandingPage from './pages/landing_page';
-import NavBar from './common/NavBar';
+import NavBar from './components/common/navigation/NavBar';
 
 
 import Home from './pages/home';
 import News from './pages/news';
-import Login from './components/login';
+import Login from './components/common/auth/login';
 import Stocks from './pages/stocks';
 import Crypto from './pages/crypto';
 
 import { AlpacaProvider } from './providers/AlpachaProvider';
 import './styles/styles.css';
 import './styles/widget.css';
-import Widget from './components/widget';
+import Widget from './components/widget/widget';
 
 const App: React.FC = () => {
  

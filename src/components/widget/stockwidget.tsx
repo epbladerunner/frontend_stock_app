@@ -1,9 +1,9 @@
 import DeskStockwidget from "./deskstockwidget"
 import MobileStockwidget from "./mobileStockWidget"
-import StockChartWithWatchlist from './stockChart';
-import CommunityChat from './chat';
-import BusinessInfo from './businessInfo';
-import NewsSection from './newsSection';
+import StockChartWithWatchlist from '../stockChart';
+import CommunityChat from '../chat';
+import BusinessInfo from '../businessInfo';
+import NewsSection from '../newsSection';
 
 
 const Stockwidget = () => {
