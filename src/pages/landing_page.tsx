@@ -4,15 +4,11 @@ import '../styles/landing_page.css';
 import '../styles/styles.css';
  
 
-import Footer from '../components/footer';
-import CryptoCard from '../components/crypto_card';
+import Footer from '../components/common/footer';
+import CryptoCard from '../components/widget/crypto_card';
 
 const LandingPage: React.FC = () => {
-<<<<<<< HEAD:src/components/landing_page.tsx
-  ////////////////////////////////
-=======
 
->>>>>>> WebSock:src/pages/landing_page.tsx
   return (
 
     <div className="landing-page">
