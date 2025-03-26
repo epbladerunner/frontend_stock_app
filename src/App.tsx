@@ -1,9 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'; // Import necessary routing components
-import StockChartWithWatchlist from './components/stockChart';
-import CommunityChat from './components/chat';
-import BusinessInfo from './components/businessInfo';
-import NewsSection from './components/newsSection';
+import Stockwidget from './components/stockwidget';
 import LandingPage from './pages/landing_page';
 import NavBar from './common/NavBar';
 
@@ -17,20 +14,18 @@ import Crypto from './pages/crypto';
 import { AlpacaProvider } from './providers/AlpachaProvider';
 import './styles/styles.css';
 import './styles/widget.css';
+import Widget from './components/widget';
 
 const App: React.FC = () => {
-  console.log("APP.tsx refresh");
+ 
   return (
     <AlpacaProvider>
 
     <Router>
       <NavBar /> {/* This will render the navigation bar across all pages */}
     
-    <div className = "stockwidget">
-      <StockChartWithWatchlist/>
-      <CommunityChat/>
-      <NewsSection/>
-      <BusinessInfo/>
+    <div >
+<Widget/>
   </div>
       <Routes> 
       

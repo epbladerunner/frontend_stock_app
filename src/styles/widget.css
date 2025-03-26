@@ -1,9 +1,10 @@
- .stockwidget {
+ .deskstockwidget {
    font-family: Arial, sans-serif;
    display: flex;
    float: right;
+   /* flex-wrap: wrap; */
    flex-direction: column;
-   align-items: end;
+   /* align-items: end; */
   height: 100vh; 
   position: relative; 
 } 
@@ -13,13 +14,15 @@
 .business-info,
 .news-section {
     
-    color:black;
-  width: 50%;
-  margin: 1rem 0;
+  color:black;
+  width: 100%;
+  margin: 1rem 0 0 0;
   padding: 1rem;
   border: 1px solid #ddd;
   background-color: white;
   border-radius: 8px;
+  flex: 1;  /* Ensures all items are equal in size */
+  min-width: 250px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
@@ -43,7 +46,7 @@
     background-color: #0056b3;
   }
 
-  .stock-chart {
+  .stock-chart, .news-section {
     text-align: center;
   }
 
@@ -64,3 +67,57 @@
     background-color: #0056b3;
   }
 
+  .mobilestockwidget{
+    display:none;
+  }
+
+  .stockwidgelogo{
+    position: absolute;
+    right: 2%;
+    width: 40px; 
+    cursor: pointer;
+  }
+
+
+@media (max-width: 900px){
+  .stockwidgelogo{
+    position: absolute;
+    right: 2%;
+    width: 40px; 
+    cursor: pointer;
+ }
+
+.deskstockwidget {
+display:none;
+ } 
+
+
+.mobilestockwidget{
+  display:flex;
+
+}
+.stock-chart-watchlist,
+.community-chat,
+.business-info,
+.news-section {
+  display:flex;  
+  color:black;
+  width: 100%;
+  margin: 1rem 0 0 0;
+  padding: 1rem;
+  border: 1px solid #ddd;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.watchlist{
+    display: flex;
+    gap: 1rem;
+
+    margin-bottom: 1rem;
+    justify-content: center;
+  }
+
+
+  
+}

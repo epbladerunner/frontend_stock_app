@@ -40,7 +40,20 @@ transition: .3s;
 
 
 
+ @media (prefers-reduced-motion: no-preference) {
+  .HamburgerMenu {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
 
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+ } 
 
 .DesktopNavigation{
         display: none;
@@ -75,13 +88,15 @@ transition: .3s;
 /*NavBar.css*/
 
 
-@media (min-width: 768px) {
+@media (min-width: 900px) {
  
     .MobileNavigation {
+      
       display: none; 
     }
 
     .DesktopNavigation {
+      opacity:70%;
       display: flex; 
       position: fixed; 
       top: 0;

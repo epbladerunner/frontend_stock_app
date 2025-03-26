@@ -17,7 +17,7 @@ const LandingPage: React.FC = () => {
         <div className="hero-content">
           <h1>Your Ultimate Stock Information Hub</h1>
           <p>Stay ahead with real-time stock news, insights, and community discussions.</p>
-          <a href="#signup" className="cta-btn">Get Started</a>
+          <a href="/login" className="cta-btn">Get Started</a>
         </div>
         <div className="hero-image">
         </div>

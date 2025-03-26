@@ -1,84 +1,50 @@
 import axios from 'axios';
-
-
+import { MarketData } from '../types/types'
+import { ChartData } from '../types/types';
 
 
 export const FetchSymbolServices = async (): Promise<string> => {
-    const response: any = await axios.get('http://localhost:3000/api/symbol/AAPL');
-  
-    // Just returning the symbol from the response
-    const getSymbol = response.data.symbol;
-  
-    console.log('Fetched Symbol:', getSymbol);
-  
-    return (getSymbol);
-  };
-  interface MarketData{
-    dailyBar: {
-      close: number,
-      high: number ,
-      low: number ,
-      numberoftrades: number,
-      openPrice: number ,
-      Timestramp: string ,
-      Volume: number,
-      VolumeWeighted: number,
-    },
-    latestQuote: {
-      AskPrice: number,
-      AskSize: number,
-      AskExchange:string,
-      BidPrice: number,
-      BidSize: number,
-      BidExchange: string,
-      Conditions:conditions[],
-      TimeStamp: string,
-      Tape: string,
-    },
-    latestTrade: {
-      Conditions: conditions[],
-      Trade_id: number,
-      Price: number,
-      Size: number,
-      Timestamp: string,
-      Exchange: string,
-      Tape: string,
-    },
-    minuteBar: {
-      ClosePrice: number,
-      HighPrice: number,
-      LowPrice: number,
-      NumberOfTrades: number,
-      OpenPrice: number,
-      Timestamp: string,
-      Volume: number,
-      VolumeWeightedAveragePrice: number,
-    },
-    prevDailyBar: {
-      ClosePrice: number,
-      HighPrice: number,
-      LowPrice: number,
-      NumberOfTrades: number,
-      OpenPrice: number,
-      TimeStamp: string,
-      Volume: number,
-      VolumeWeightedAveragePrice: number,
-    },
-    symbol: string,
-  }
-  interface conditions{
-    condition: string,
-  }
-  export const getMarketData = async (): Promise<MarketData>  => {
-    console.log("you made it here");
-    const response:any = await axios.get(`http://localhost:3000/api/mapped/TSLA/snapshot`);
-    
-    const marketData = response.data;
-    console.log("response",response.data)
+  const response: any = await axios.get('http://localhost:3000/api/symbol/AAPL');
 
-    return marketData;
- 
-  }
+  // Just returning the symbol from the response
+  const getSymbol = response.data.symbol;
+
+  console.log('Fetched Symbol:', getSymbol);
+
+  return (getSymbol);
+};
+
+export const getMarketData = async (ticker: string): Promise<MarketData> => {
+  console.log("getMarketData pinged");
+  console.log("this it the ticker you are looking for ", ticker);
+
+  const response: any = await axios.get(`http://localhost:3000/api/mapped/${ticker}/snapshot`);
+
+  const marketData = response.data;
+  console.log("MarketData.response", response.data)
+
+  return marketData;
+
+}
+
+export const getMarketNews = async (ticker: string) => {
+  const response: any = await axios.get('');
+
+  const marketNews = response.data;
+
+  return marketNews;
+
+}
+
+
+//send websocket data
+export const sendSocketData = async(lastJsonMessage:ChartData)=>{
+
+
+  axios.post('');
+
+
+}
 
 
 
